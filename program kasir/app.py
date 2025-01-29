@@ -1,23 +1,30 @@
-import func
+from func import *
+import pyfiglet
+
+ucapan_text = pyfiglet.figlet_format("Kasir Canggih", font="slant")
+
+warna_text = Fore.CYAN + ucapan_text  + reset
+
+print(warna_text)
 
 while True:
-  print("=== Menu Kasir ====\n")
-  print("1. Daftar Barang")
-  print("2. Saldo")
-  print("3. Beli Barang")
-  print("4. Keluar\n")
-  print("===================\n")
+  print(Fore.CYAN + "=== Menu Kasir ====" + reset + "\n")
+  print(Fore.YELLOW + "1. Daftar Barang" + reset)
+  print(Fore.GREEN + "2. Saldo" + reset)
+  print(Fore.MAGENTA + "3. Beli Barang" + reset)
+  print(Fore.RED + "4. Keluar" + reset + "\n")
+  print(Fore.CYAN + "===================" + reset + "\n")
 
   perintah = input("Pilih Menu : ")
 
   if perintah == "1":
-    func.daftar_barang()
+    daftar_barang()
   elif perintah == "2":
-    func.saldo()
+    saldo()
   elif perintah == "3":
-    func.beli_barang()
+    beli_barang()
 
   if perintah == "4":
     break
 
-print("Program Selesai Kakak 🙏")
+print(Fore.RED + "Program Selesai Kakak 🙏" + reset)
